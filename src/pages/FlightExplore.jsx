@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { SearchBar } from "../components";
 import { fetchFlightDeals, fetchAirportDetails } from "../services/flightService";
 import { FlightCard } from "../container";
@@ -60,11 +59,6 @@ const FlightExplore = () => {
           fetchAirportDetails({query : departure} ),
           fetchAirportDetails({query: arrival})
         ]);
-        // console.log("dESTINATION BELOW");
-        // console.log(destination);
-        // console.log("ORGGIN BELOW");
-        // console.log(origin);
-        // // console.log(!signal.aborted)
 
         if (!signal.aborted) {
           setOriginSkyId(origin.skyId);
